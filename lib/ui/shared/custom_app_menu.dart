@@ -56,6 +56,22 @@ class _TabletDesktopMenu extends StatelessWidget {
             // onPressed: () => navigationService.navigateTo("/abc123"),
             onPressed: () => locator<NavigationService>().navigateTo("/abc123"),
           ),
+          CustomFlatuButton(
+            text: "Stateful 100",
+            color: Colors.black,
+            // onPressed: () => Navigator.pushNamed(context, '/abc123'),
+            // onPressed: () => navigationService.navigateTo("/abc123"),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo("/stateful/100"),
+          ),
+          CustomFlatuButton(
+            text: "Provider 200",
+            color: Colors.black,
+            // onPressed: () => Navigator.pushNamed(context, '/abc123'),
+            // onPressed: () => navigationService.navigateTo("/abc123"),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo("/provider?q=200"),
+          ),
         ],
       ),
     );

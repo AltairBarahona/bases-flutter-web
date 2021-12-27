@@ -6,22 +6,18 @@ import 'package:flutter/material.dart';
 
 import "package:flutter/foundation.dart" show kIsWeb;
 
-import 'package:bases_flutter_web/ui/pages/counter_page.dart';
-import 'package:bases_flutter_web/ui/pages/counter_provider_page.dart';
-import 'package:bases_flutter_web/ui/pages/page_404.dart';
-
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     //Basado en el nombre de la ruta necesito generar algo
     switch (settings.name) {
       case '/stateful':
-        return _fadeRoute(CounterView(), "/stateful");
+        return _fadeRoute(CounterView(base: '5'), "/stateful");
       // return MaterialPageRoute(
       //   settings: RouteSettings(name: '/stateful'),
       //   builder: (_) => CounterPage(),
       // );
       case '/provider':
-        return _fadeRoute(CounterProviderView(), "/provider");
+        return _fadeRoute(CounterProviderView(base: '5'), "/provider");
 
       // return MaterialPageRoute(
       //   settings: RouteSettings(name: '/provider'),

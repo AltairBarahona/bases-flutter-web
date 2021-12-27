@@ -1,4 +1,5 @@
 import 'package:bases_flutter_web/services/navigator_service.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:get_it/get_it.dart';
 
 GetIt locator = GetIt.instance;
